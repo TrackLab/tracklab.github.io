@@ -6,7 +6,7 @@ I run a [YouTube Channel](https://www.youtube.com/c/TrackLab/featured) to showca
 There is also a [Twitter Account](https://twitter.com/TrackLabs).<br/>
 And of course there is a [GitHub Page](https://github.com/TrackLab) that lists some of my projects publicly.<br/>  
 
-For my YouTube Community, I created a [Discord Server](discord.tracklab.dev).<br/>
+For my YouTube Community, I created a [Discord Server](https://discord.com/invite/8yzVHS7XUF).<br/>
 
 ### Contact
 The best way to contact me is over E-Mail: contact@tracklab.dev
