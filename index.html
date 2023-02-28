@@ -1,147 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Trackster Laboratories</title>
-        <meta property="og:description" content="Hello, I am TrackLab" />
-        <meta property="og:url" content="https://tracklab.dev" />
-        <meta property="og:type" content="website" />
-        <link rel="stylesheet" href="css/master.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Staatliches&display=swap" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <script src="js/master.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script>
-            function repair2() {
-                let header2 = document.querySelector("#header2");
-                if (!(header2.style.display == "none")) {
-                    let height = header2.offsetWidth;
-                    for (let cur of document.getElementsByClassName("brhelper")) {
-                        cur.innerHTML = "<br><br><br>";
-                    }
-                }
+  <head>
+    <meta charset="utf-8">
+    <title>Trackster Laboratories</title>
+    <meta property="og:description" content="Hello, I am TrackLab">
+    <meta property="og:url" content="https://tracklab.dev">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/master.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+      function repair2() {
+        let header2 = document.querySelector('#header2');
+        if(!(header2.style.display == "none")) {
+            let height = header2.offsetWidth;
+            for(let cur of document.getElementsByClassName("brhelper")) {
+              cur.innerHTML = "<br><br><br>";
             }
+        }
+      }
 
-            $(document).ready(function () {
-                header_animation();
+      $(document).ready(function() {
+        header_animation();
 
-                repair2();
+        repair2();
 
-                var home = document.getElementById("home");
-                home.style.display = "";
-                home.style.marginLeft = "-300px";
-                home.style.opacity = "0.2";
-                $("#home").animate({
-                    "margin-left": "0px",
-                    opacity: "1",
-                });
-            });
+        var home = document.getElementById("home");
+        home.style.display = "";
+        home.style.marginLeft = "-300px";
+        home.style.opacity = "0.2";
+        $("#home").animate({
+          'margin-left': '0px',
+          'opacity': '1'
+        });
+      });
 
-            $(document).resize(function () {
-                repair2();
-            });
-        </script>
-    </head>
-    <body>
-        <header class="header1">
-            <div class="content">
-                <h1 class="stat">Trackster Laboratories</h1>
-                <img src="img/TLLogo2.png" style="width: 40px; height: 40px; padding: 20px 10px;" />
+      $(document).resize(function() {
+          repair2();
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header1">
+      <div class="content">
+        <h1 class="stat">Trackster Laboratories</h1>
+        <img src="img/TLLogo2.png" style="width: 40px; height: 40px; padding: 20px 10px;"/>
 
-                <div class="sidelist quick">
-                    <h3 onClick="show('home');">
-                        <strong><i class="fa-solid fa-house"></i> Home</strong>
-                    </h3>
-                    <h3 onClick="show('about');"><i class="fa-solid fa-address-card"></i> About Me</h3>
-                    <h3 onClick="show('contact');"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
-                </div>
-            </div>
-        </header>
-
-        <header class="header2" id="header2">
-            <div class="content">
-                <i style="color: white;" onClick="toggle_bar();" class="fa-solid fa-bars"></i>
-
-                <div class="toside">
-                    <h1 class="stat" style="color: white;">Tracklab</h1>
-                    <img src="img/TLLogo2.png" style="width: 40px; height: 40px; padding: 20px 10px;" />
-                </div>
-            </div>
-        </header>
-
-        <div class="sidebar quick" id="sidebar" style="display: none;">
-            <div class="brhelper"></div>
-            <h1 onClick="show('home'); toggle_bar();"><i class="fa-solid fa-house"></i> Home</h1>
-            <h1 onClick="show('about'); toggle_bar();"><i class="fa-solid fa-address-card"></i> About Me</h1>
-            <h1 onClick="show('contact'); toggle_bar();"><i class="fa-solid fa-paper-plane"></i> Contact</h1>
+        <div class="sidelist quick">
+          <h3 onClick="show('home');"><strong><i class="fa-solid fa-house"></i> Home</strong></h3>
+          <h3 onClick="show('about');"><i class="fa-solid fa-address-card"></i> About Me</h3>
+          <h3 onClick="show('contact');"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
         </div>
+      </div>
+    </header>
 
-        <div id="home" class="tab">
-            <div class="brhelper"></div>
+    <header class="header2" id="header2">
+        <div class="content">
+          <i style="color: white;" onClick="toggle_bar();" class="fa-solid fa-bars"></i>
 
-            <div class="content2 quick">
-                <h1 style="font-size: 60px;"><strong>Hello, I am TrackLab</strong></h1>
-                <hr />
-                <h2 style="float: right;">
-                    <a href="https://youtube.tracklab.dev" target="_blank">YouTube <i class="fa-brands fa-youtube" style="color: #ef2424;"></i></a> |
-                    <a href="https://twitter.tracklab.dev" target="_blank">Twitter <i class="fa-brands fa-twitter-square" style="color: #2467e7;"></i></a> |
-                    <a href="https://github.tracklab.dev" target="_blank">GitHub <i class="fa-brands fa-github-square" style="background: #252527;"></i></a> |
-                    <a href="https://discord.tracklab.dev" target="_blank">Discord Server <i class="fa-brands fa-discord" style="color: rgb(112, 124, 196);"></i></a>
-                </h2>
-            </div>
-
-            <div class="images">
-                <img src="img/x1.png" class="img1" />
-                <img style="filter: brightness(1000%);" src="img/y.png" class="img2" />
-            </div>
+          <div class="toside">
+            <h1 class="stat" style="color: white;">Tracklab</h1>
+            <img src="img/TLLogo2.png" style="width: 40px; height: 40px; padding: 20px 10px;"/>
+          </div>
         </div>
+    </header>
 
-        <div id="about" class="tab" style="display: none;">
-            <div class="brhelper"></div>
+    <div class="sidebar quick" id="sidebar" style="display: none;">
+      <div class="brhelper"></div>
+        <h1 onClick="show('home'); toggle_bar();"><i class="fa-solid fa-house"></i> Home</h1>
+        <h1 onClick="show('about'); toggle_bar();"><i class="fa-solid fa-address-card"></i> About Me</h1>
+        <h1 onClick="show('contact'); toggle_bar();"><i class="fa-solid fa-paper-plane"></i> Contact</h1>
+    </div>
 
-            <div class="content2 quick">
-                <div style="background: rgba(250, 250, 250, 0.4); padding: 10px 20px;">
-                    <h1 style="font-size: 60px;"><strong>Who am I?</strong></h1>
-                    <hr />
-                    <h2 style="float: right;">
-                        <a href="https://youtube.tracklab.dev" target="_blank">YouTube <i class="fa-brands fa-youtube" style="color: #ef2424;"></i></a> |
-                        <a href="https://twitter.tracklab.dev" target="_blank">Twitter <i class="fa-brands fa-twitter-square" style="color: #2467e7;"></i></a> |
-                        <a href="https://github.tracklab.dev" target="_blank">GitHub <i class="fa-brands fa-github-square" style="background: #252527;"></i></a> |
-                        <a href="https://discord.tracklab.dev" target="_blank">Discord Server <i class="fa-brands fa-discord" style="color: rgb(112, 124, 196);"></i></a> |
-                        <a href="https://www.twitch.tv/tracklabs"> Twitch <i class="fa-brands fa-twitch" style="color: rgba(145, 70, 255);"></i></a>
-                    </h2>
-                </div>
-            </div>
+    <div id="home" class="tab">
+      <div class="brhelper"></div>
 
-            <div class="images">
-                <img src="img/x1.png" class="img1" />
-            </div>
+      <div class="content2 quick">
+        <h1 style="font-size: 60px;"><strong>Hello, I am TrackLab</strong></h1>
+        <hr>
+        <h2 style="float: right;">
+          <a href="https://youtube.tracklab.dev" target="_blank">YouTube <i class="fa-brands fa-youtube" style="color: #EF2424;"></i></a> |
+          <a href="https://twitter.tracklab.dev" target="_blank">Twitter <i class="fa-brands fa-twitter-square" style="color: #2467E7;"></i></a> |
+          <a href="https://github.tracklab.dev" target="_blank">GitHub <i class="fa-brands fa-github-square" style="background: #252527;"></i></a> |
+          <a href="https://discord.tracklab.dev" target="_blank">Discord Server <i class="fa-brands fa-discord" style="color: rgb(112, 124, 196);"></i></a></h2> | 
+          <a href="https://www.twitch.tv/tracklabs"> Twitch <i class="fa-brands fa-twitch" style="color: rgba(145, 70, 255);"></i></a>
+      </div>
+
+      <div class="images">
+        <img src="img/x1.png" class="img1"/>
+        <img style="filter: brightness(1000%);" src="img/y.png" class="img2"/>
+      </div>
+    </div>
+
+    <div id="about" class="tab" style="display: none;">
+      <div class="brhelper"></div>
+
+      <div class="content2 quick">
+        <div style="background: rgba(250, 250, 250, 0.4); padding: 10px 20px;">
+          <h1 style="font-size: 60px;"><strong>Who am I?</strong></h1>
+          <hr>
+          <h2 style="float: center">
+            A Programmer. If you need the short explanation.<br><br>
+
+            The long explanation is that I am a current Computer Science Student that tries to make his way through the semesters. While also coding my own projects.<br><br>
+
+            Some of these projects get converted into Videos that are being uploaded on YouTube. Sketches, if you will.<br><br>
+
+            My main focus lays in Machine Learning. But I am also creating tools for rather nieche things.
+            Such as ViRe, a VR Motion Capture program.
+            Or ULAR, a Package to make anything in Unity react to any audio.
+          </h2>
         </div>
+      </div>
 
-        <div id="contact" class="tab" style="display: none;">
-            <div class="brhelper"></div>
 
-            <div class="content2 quick">
-                <div style="padding: 1px 20px;">
-                    <h1 style="font-size: 60px;"><strong>You can contact me!</strong></h1>
-                    <hr />
-                    <h2><a href="mailto:contact@tracklab.dev" target="_blank">Mail to contact@tracklab.dev</a></h2>
-                    <h2><a href="https://discord.tracklab.dev" target="_blank"> Or message me over my Discord Server</a></h2>
-                </div>
-            </div>
+      <div class="images">
+        <img src="img/x1.png" class="img1"/>
+      </div>
+    </div>
 
-            <div class="images">
-                <img src="img/y.png" style="filter: brightness(1000%);" class="img1" />
-            </div>
+    <div id="contact" class="tab" style="display: none;">
+      <div class="brhelper"></div>
+
+      <div class="content2 quick">
+        <div style="padding: 1px 20px;">
+          <h1 style="font-size: 60px;"><strong>You can contact me!</strong></h1>
+          <hr>
+          <h2><a href="mailto:contact@tracklab.dev" target="_blank">Mail to contact@tracklab.dev</a></h2>
+          <h2><a href="https://discord.tracklab.dev" target="_blank"> Or message me over my Discord Server</a></h2>
         </div>
-    </body>
+      </div>
+
+      <div class="images">
+        <img src="img/y.png" style="filter: brightness(1000%);" class="img1"/>
+      </div>
+
+    </div>
+  </body>
 </html>
